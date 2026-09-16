@@ -1,0 +1,71 @@
+{
+  "file": "D:\\08_AI问答\\cgns_fluent_tool\\examples\\sample_v41.cgns",
+  "cgns_version": 4.1,
+  "storage_format": "HDF5",
+  "bases": [
+    "Base"
+  ],
+  "cell_dim": 3,
+  "phys_dim": 3,
+  "times": [
+    0.0,
+    0.1
+  ],
+  "solutions": [
+    "FlowSolution"
+  ],
+  "zones": [
+    {
+      "zone_id": 1,
+      "name": "Fluid",
+      "zone_type": "Unstructured",
+      "role": "流体域（含壁面边界）",
+      "base": "Base",
+      "n_vertex": 4,
+      "n_cell": 1,
+      "element_types": [
+        "NFACE_n",
+        "NGON_n"
+      ],
+      "boundaries": [
+        {
+          "name": "wall",
+          "type": "BCWall"
+        }
+      ],
+      "families": [],
+      "solutions": [
+        "FlowSolution"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "Pressure",
+      "zone_id": 1,
+      "zone_name": "Fluid",
+      "solution": "FlowSolution",
+      "location": "Vertex",
+      "location_cn": "节点(Vertex)",
+      "count": 4,
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    {
+      "name": "VelocityX",
+      "zone_id": 1,
+      "zone_name": "Fluid",
+      "solution": "FlowSolution",
+      "location": "Vertex",
+      "location_cn": "节点(Vertex)",
+      "count": 4,
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,42 @@
+{
+  "input": {
+    "file": null,
+    "folder": "D:\\08_AI问答\\my_data\\waterPump_old",
+    "recursive": true,
+    "patterns": ["*.cgns", "*.hdf", "*.hdf5", "*.adf"]
+  },
+  "output": {
+    "dir": "./field_output_old",
+    "keep_relative_structure": true,
+    "report_file": "batch_report.txt"
+  },
+  "cgns_tools": {
+    "cgnsconvert": "cgnsconvert",
+    "output_format": "auto"
+  },
+  "features": {
+    "info": {
+      "enabled": false,
+      "export_file": false
+    },
+    "query": {
+      "enabled": true,
+      "x": -0.012882,
+      "y": 0.027609,
+      "z": -0.0037403,
+      "radius": 0.00016694,
+      "fields": ["PressureStagnation"],
+      "zone": null,
+      "solution": null,
+      "time": null,
+      "max_hits": 50,
+      "export_file": true
+    },
+    "convert": {
+      "enabled": false,
+      "target_version": 3.4,
+      "suffix": "_v34",
+      "output_dir": "./convert_output"
+    }
+  }
+}
